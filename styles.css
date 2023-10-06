@@ -37,6 +37,12 @@ body{
 
 }
 
+.window-wrap{
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
 /*BACKGROUND BUILDINGS - "bb" stands for "background building"*/
 
 .bb1{
@@ -60,7 +66,10 @@ body{
 .bb1d{
     width: 100%;
     height: 70%;
-    background: linear-gradient(var(--building-color1) 50%, var(--window-color1));
+    background: linear-gradient(
+    var(--building-color1) 50%,
+    var(--window-color1)
+    );
 }
 
 .bb2{
@@ -79,13 +88,22 @@ body{
 .bb2b{
     width: 100%;
     height: 100%;
-    background: repeating-linear-gradient(var(--building-color2)0%, var(--building-color2)6%, var(--window-color2)6%, var(--window-color2)9%);
+    background: repeating-linear-gradient(
+    var(--building-color2)0%,
+    var(--building-color2)6%,
+    var(--window-color2)6%,
+    var(--window-color2)9%
+    );
 }
 
 .bb3{
     width: 10%;
     height: 55%;
-    background: repeating-linear-gradient(90deg, var(--building-color3), var(--building-color3), var(--window-color3)15%);
+    background: repeating-linear-gradient(
+    90deg, var(--building-color3),
+    var(--building-color3),
+    var(--window-color3)15%
+    );
 }
 
 .bb4{
@@ -120,7 +138,10 @@ body{
 
 .bb1-window{
     height: 10%;
-    background:linear-gradient(var(--building-color1), var(--window-color1) );
+    background:linear-gradient(
+    var(--building-color1),
+    var(--window-color1)
+    );
 }
 
 /*FOREGROUND BUILDINGS - "fb" stands for "foreground building"*/
@@ -128,7 +149,34 @@ body{
 .fb1{
     width: 10%;
     height: 60%;
+}
+
+.fb1a{
+    border-bottom: 7vh solid var(--building-color4);
+    border-left: 2vw solid transparent;
+    border-right: 2vw solid transparent;
+}
+
+.fb1b{
+    width: 60%;
+    height: 10%;
     background-color: var(--building-color4);
+}
+
+.fb1c{
+    width: 100%;
+    height: 80%;
+    background: repeating-linear-gradient(
+        90deg, var(--building-color4)0%, 
+        var(--building-color4)10%, 
+        transparent 10%, transparent 15%
+        ),
+        repeating-linear-gradient(
+        var(--building-color4)0%,
+        var(--building-color4)10%,
+        var(--window-color4)10%, 
+        var(--window-color4)90% 
+        );
 }
 
 .fb2{
